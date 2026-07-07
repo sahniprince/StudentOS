@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudentOS — Everything a student needs in one smart workspace. Plan assignments, track attendance, organize notes, and achieve your academic goals.">
+  <meta name="keywords" content="student productivity, dashboard, planner, attendance tracker, study organizer">
+  <meta name="author" content="StudentOS">
+
+  <title>StudentOS — Your Smart Student Workspace</title>
+
+  <!-- Google Fonts — Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =============================================
+       NAVIGATION BAR
+       ============================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <!-- Logo -->
+      <a href="#" class="navbar__logo">
+        <span class="navbar__logo-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+            <path d="M10 22V14L16 10L22 14V22L16 18L10 22Z" fill="white" opacity="0.9"/>
+            <path d="M16 10L22 14L16 18L10 14L16 10Z" fill="white"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#4F46E5"/>
+                <stop offset="1" stop-color="#7C3AED"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="navbar__logo-text">StudentOS</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="navbar__nav" id="navMenu" aria-label="Main navigation">
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a href="#hero" class="navbar__link is-active">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#features" class="navbar__link">Features</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__link">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#faq" class="navbar__link">FAQ</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#contact" class="navbar__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navbar Actions -->
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--ghost">Log In</a>
+        <a href="#" class="btn btn--primary">Get Started</a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- =============================================
+         HERO SECTION
+         ============================================= -->
+    <section class="hero" id="hero">
+      <!-- Animated gradient orbs background -->
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <!-- Left: Content -->
+        <div class="hero__content reveal">
+          <span class="hero__badge">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            Now in Beta — Free for Students
+          </span>
+
+          <h1 class="hero__title">
+            Everything a Student Needs.
+            <span class="hero__title-gradient">One Smart Workspace.</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            Plan assignments, track attendance, organize notes, and manage your entire academic life — all from a single, beautifully designed dashboard.
+          </p>
+
+          <div class="hero__cta">
+            <a href="#" class="btn btn--primary btn--lg">
+              Get Started Free
+              <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#features" class="btn btn--outline btn--lg">
+              Explore Features
+            </a>
+          </div>
+
+          <p class="hero__note">No credit card required · Free forever for students</p>
+        </div>
+
+        <!-- Right: Dashboard Mockup (CSS Only) -->
+        <div class="hero__mockup reveal" aria-hidden="true">
+          <div class="mockup">
+            <!-- Mockup window chrome -->
+            <div class="mockup__chrome">
+              <span class="mockup__dot mockup__dot--red"></span>
+              <span class="mockup__dot mockup__dot--yellow"></span>
+              <span class="mockup__dot mockup__dot--green"></span>
+              <span class="mockup__chrome-title">StudentOS Dashboard</span>
+            </div>
+
+            <!-- Mockup body -->
+            <div class="mockup__body">
+              <!-- Sidebar -->
+              <div class="mockup__sidebar">
+                <div class="mockup__sidebar-item mockup__sidebar-item--active"></div>
+                <div class="mockup__sidebar-item"></div>
+                <div class="mockup__sidebar-item"></div>
+                <div class="mockup__sidebar-item"></div>
+                <div class="mockup__sidebar-item"></div>
+              </div>
+
+              <!-- Main content area -->
+              <div class="mockup__main">
+                <!-- Header bar -->
+                <div class="mockup__header">
+                  <div class="mockup__header-title"></div>
+                  <div class="mockup__header-search"></div>
+                </div>
+                <!-- Stat bars -->
+                <div class="mockup__stats">
+                  <div class="mockup__stat-card mockup__stat-card--1">
+                    <div class="mockup__stat-label"></div>
+                    <div class="mockup__stat-value"></div>
+                    <div class="mockup__stat-bar">
+                      <div class="mockup__stat-fill" style="width: 72%"></div>
+                    </div>
+                  </div>
+                  <div class="mockup__stat-card mockup__stat-card--2">
+                    <div class="mockup__stat-label"></div>
+                    <div class="mockup__stat-value"></div>
+                    <div class="mockup__stat-bar">
+                      <div class="mockup__stat-fill" style="width: 58%"></div>
+                    </div>
+                  </div>
+                  <div class="mockup__stat-card mockup__stat-card--3">
+                    <div class="mockup__stat-label"></div>
+                    <div class="mockup__stat-value"></div>
+                    <div class="mockup__stat-bar">
+                      <div class="mockup__stat-fill" style="width: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Content rows -->
+                <div class="mockup__rows">
+                  <div class="mockup__row"></div>
+                  <div class="mockup__row"></div>
+                  <div class="mockup__row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Cards -->
+          <div class="floating-card floating-card--1">
+            <span class="floating-card__icon">📝</span>
+            <span class="floating-card__text">Assignments</span>
+            <span class="floating-card__badge">3 Due</span>
+          </div>
+
+          <div class="floating-card floating-card--2">
+            <span class="floating-card__icon">📊</span>
+            <span class="floating-card__text">Attendance</span>
+            <span class="floating-card__badge">92%</span>
+          </div>
+
+          <div class="floating-card floating-card--3">
+            <span class="floating-card__icon">📒</span>
+            <span class="floating-card__text">Notes</span>
+            <span class="floating-card__badge">12 New</span>
+          </div>
+
+          <div class="floating-card floating-card--4">
+            <span class="floating-card__icon">🎯</span>
+            <span class="floating-card__text">Study Goals</span>
+            <span class="floating-card__badge">On Track</span>
+          </div>
+
+          <div class="floating-card floating-card--5">
+            <span class="floating-card__icon">📅</span>
+            <span class="floating-card__text">Exams</span>
+            <span class="floating-card__badge">In 5 Days</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         TRUSTED / STATS SECTION
+         ============================================= -->
+    <section class="trusted" id="trusted">
+      <div class="container">
+        <p class="trusted__heading reveal">Designed for Students, Built for Success</p>
+
+        <div class="trusted__grid">
+          <div class="trusted__card reveal">
+            <span class="trusted__number" data-target="12500">0</span>
+            <span class="trusted__label">Assignments Managed</span>
+          </div>
+          <div class="trusted__card reveal">
+            <span class="trusted__number" data-target="8400">0</span>
+            <span class="trusted__label">Hours Saved</span>
+          </div>
+          <div class="trusted__card reveal">
+            <span class="trusted__number" data-target="3200">0</span>
+            <span class="trusted__label">Study Sessions</span>
+          </div>
+          <div class="trusted__card reveal">
+            <span class="trusted__number" data-target="15000">0</span>
+            <span class="trusted__label">Organized Notes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         FEATURES SECTION
+         ============================================= -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Features</span>
+          <h2 class="section-title">Everything You Need to <span class="text-gradient">Excel Academically</span></h2>
+          <p class="section-subtitle">Powerful tools designed specifically for the modern student experience.</p>
+        </div>
+
+        <div class="features__grid">
+          <!-- Feature 1 -->
+          <article class="feature-card reveal">
+            <div class="feature-card__icon-wrap feature-card__icon-wrap--indigo">
+              <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 11L12 14L22 4"/>
+                <path d="M21 12V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H16"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Assignment Planner</h3>
+            <p class="feature-card__desc">Organize, prioritize, and track all your assignments with deadlines, progress bars, and smart reminders.</p>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature-card reveal">
+            <div class="feature-card__icon-wrap feature-card__icon-wrap--violet">
+              <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Attendance Tracker</h3>
+            <p class="feature-card__desc">Monitor your attendance percentage across all subjects. Get alerts before you fall below the required threshold.</p>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature-card reveal">
+            <div class="feature-card__icon-wrap feature-card__icon-wrap--cyan">
+              <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Smart Timetable</h3>
+            <p class="feature-card__desc">Auto-generate weekly timetables. Sync with your calendar and never miss a class or lab session again.</p>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature-card reveal">
+            <div class="feature-card__icon-wrap feature-card__icon-wrap--indigo">
+              <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7V21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H2V3Z"/>
+                <path d="M22 3H16C14.9391 3 13.9217 3.42143 13.1716 4.17157C12.4214 4.92172 12 5.93913 12 7V21C12 20.2044 12.3161 19.4413 12.8787 18.8787C13.4413 18.3161 14.2044 18 15 18H22V3Z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Study Planner</h3>
+            <p class="feature-card__desc">Plan focused study sessions using proven techniques. Set goals, track time, and build consistent study habits.</p>
+          </article>
+
+          <!-- Feature 5 -->
+          <article class="feature-card reveal">
+            <div class="feature-card__icon-wrap feature-card__icon-wrap--violet">
+              <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6A2 2 0 0 0 4 4V20A2 2 0 0 0 6 22H18A2 2 0 0 0 20 4V8"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Notes Organizer</h3>
+            <p class="feature-card__desc">Create, categorize, and search through all your notes. Support for rich text, tags, and subject-wise folders.</p>
+          </article>
+
+          <!-- Feature 6 -->
+          <article class="feature-card reveal">
+            <div class="feature-card__icon-wrap feature-card__icon-wrap--cyan">
+              <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5A3.5 3.5 0 0 0 6 8.5V9A3.5 3.5 0 0 0 9.5 12.5H14.5A3.5 3.5 0 0 1 18 16V16.5A3.5 3.5 0 0 1 14.5 20H6"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Expense Tracker</h3>
+            <p class="feature-card__desc">Keep your student budget in check. Log expenses, set monthly limits, and visualize your spending patterns.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         WHY CHOOSE SECTION
+         ============================================= -->
+    <section class="why" id="about">
+      <div class="container why__inner">
+        <!-- Left: CSS Illustration -->
+        <div class="why__illustration reveal" aria-hidden="true">
+          <div class="why__shape-group">
+            <!-- Decorative geometric shapes -->
+            <div class="why__circle why__circle--lg"></div>
+            <div class="why__circle why__circle--md"></div>
+            <div class="why__circle why__circle--sm"></div>
+            <div class="why__square"></div>
+            <div class="why__triangle"></div>
+            <!-- Floating mini cards -->
+            <div class="why__mini-card why__mini-card--1">
+              <div class="why__mini-bar" style="width: 80%"></div>
+              <div class="why__mini-bar" style="width: 60%"></div>
+              <div class="why__mini-bar" style="width: 90%"></div>
+            </div>
+            <div class="why__mini-card why__mini-card--2">
+              <div class="why__mini-circle"></div>
+              <div class="why__mini-lines">
+                <div class="why__mini-line"></div>
+                <div class="why__mini-line why__mini-line--short"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Benefits List -->
+        <div class="why__content reveal">
+          <span class="section-tag">Why StudentOS</span>
+          <h2 class="section-title">Built to Help You <span class="text-gradient">Succeed</span></h2>
+          <p class="section-subtitle">We understand student life. That's why every feature is crafted to reduce friction and maximize focus.</p>
+
+          <ul class="why__benefits">
+            <li class="why__benefit">
+              <span class="why__benefit-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10L8.5 13.5L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <strong>Save Time</strong>
+                <p>Automate repetitive planning tasks and focus on what matters — learning.</p>
+              </div>
+            </li>
+            <li class="why__benefit">
+              <span class="why__benefit-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10L8.5 13.5L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <strong>Stay Organized</strong>
+                <p>Keep assignments, notes, and schedules neatly organized in one place.</p>
+              </div>
+            </li>
+            <li class="why__benefit">
+              <span class="why__benefit-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10L8.5 13.5L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <strong>Track Progress</strong>
+                <p>Visualize your academic journey with insights and analytics dashboards.</p>
+              </div>
+            </li>
+            <li class="why__benefit">
+              <span class="why__benefit-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10L8.5 13.5L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <strong>Never Miss Deadlines</strong>
+                <p>Smart reminders and notifications ensure you stay ahead of every due date.</p>
+              </div>
+            </li>
+            <li class="why__benefit">
+              <span class="why__benefit-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10L8.5 13.5L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <strong>Simple Interface</strong>
+                <p>Intuitive design that requires zero learning curve — start using it instantly.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         HOW IT WORKS SECTION
+         ============================================= -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-title">Three Simple Steps to <span class="text-gradient">Academic Success</span></h2>
+          <p class="section-subtitle">Getting started takes less than a minute. Here's how.</p>
+        </div>
+
+        <div class="steps">
+          <!-- Step 1 -->
+          <div class="step reveal">
+            <div class="step__number">1</div>
+            <div class="step__content">
+              <h3 class="step__title">Plan</h3>
+              <p class="step__desc">Set up your subjects, timetable, and goals. Organize everything before the semester begins.</p>
+            </div>
+          </div>
+
+          <!-- Timeline connector -->
+          <div class="step__connector" aria-hidden="true">
+            <div class="step__connector-line"></div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step reveal">
+            <div class="step__number">2</div>
+            <div class="step__content">
+              <h3 class="step__title">Track</h3>
+              <p class="step__desc">Log attendance, manage assignments, and monitor your progress in real-time dashboards.</p>
+            </div>
+          </div>
+
+          <!-- Timeline connector -->
+          <div class="step__connector" aria-hidden="true">
+            <div class="step__connector-line"></div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step reveal">
+            <div class="step__number">3</div>
+            <div class="step__content">
+              <h3 class="step__title">Achieve</h3>
+              <p class="step__desc">Hit your targets, ace your exams, and build the habits that lead to consistent academic success.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         TESTIMONIALS SECTION
+         ============================================= -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">Loved by Students <span class="text-gradient">Everywhere</span></h2>
+          <p class="section-subtitle">Hear from students who transformed their academic life with StudentOS.</p>
+        </div>
+
+        <div class="testimonials__grid">
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "StudentOS completely changed how I manage my semester. I went from missing deadlines to finishing assignments days early. The dashboard is genuinely beautiful and easy to use."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">A</div>
+              <div>
+                <p class="testimonial-card__name">Ananya Sharma</p>
+                <p class="testimonial-card__college">Delhi University, B.Tech CSE</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "The attendance tracker alone is worth it. I always know exactly how many classes I can skip without falling below 75%. Plus the notes organizer saves me hours every week."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">R</div>
+              <div>
+                <p class="testimonial-card__name">Rahul Mehta</p>
+                <p class="testimonial-card__college">IIT Bombay, B.Tech ECE</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "I've tried Notion, Google Keep, and a dozen other apps. StudentOS is the first tool that actually understands what students need. The study planner with Pomodoro integration is a game-changer."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">P</div>
+              <div>
+                <p class="testimonial-card__name">Priya Patel</p>
+                <p class="testimonial-card__college">NIT Trichy, M.Sc Data Science</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         FAQ SECTION
+         ============================================= -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+          <p class="section-subtitle">Got questions? We've got answers. If you need more help, reach out to us.</p>
+        </div>
+
+        <div class="faq__list">
+          <!-- FAQ Item 1 -->
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              <span>Is StudentOS free to use?</span>
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq__answer" aria-hidden="true">
+              <p>Yes! StudentOS is completely free for all students. We believe productivity tools should be accessible to everyone. A premium plan with advanced features will be available in the future.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              <span>Can I access StudentOS on my phone?</span>
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq__answer" aria-hidden="true">
+              <p>Absolutely. StudentOS is fully responsive and works beautifully on phones, tablets, and desktops. A dedicated mobile app is also in development and will be released soon.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              <span>How is this different from Notion or Google Calendar?</span>
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq__answer" aria-hidden="true">
+              <p>Unlike general-purpose tools, StudentOS is specifically designed for students. It combines assignment tracking, attendance monitoring, note organization, expense management, and study planning into one unified platform — no complex setup required.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              <span>Is my data safe and private?</span>
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq__answer" aria-hidden="true">
+              <p>Your privacy is our top priority. All data is encrypted end-to-end and stored securely. We never share, sell, or use your personal data for advertising. You own your data and can export or delete it at any time.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              <span>Can I collaborate with classmates on StudentOS?</span>
+              <svg class="faq__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq__answer" aria-hidden="true">
+              <p>Collaboration features are on our roadmap! Soon you'll be able to share notes, create group study sessions, and collaborate on projects — all within StudentOS. Stay tuned for updates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         CTA BANNER SECTION
+         ============================================= -->
+    <section class="cta-banner" id="contact">
+      <div class="container">
+        <div class="cta-banner__inner reveal">
+          <!-- Decorative background -->
+          <div class="cta-banner__bg" aria-hidden="true">
+            <div class="cta-banner__glow cta-banner__glow--1"></div>
+            <div class="cta-banner__glow cta-banner__glow--2"></div>
+          </div>
+
+          <h2 class="cta-banner__title">Start Organizing Your Student Life Today</h2>
+          <p class="cta-banner__subtitle">Join thousands of students who are already studying smarter, not harder.</p>
+          <a href="#" class="btn btn--white btn--lg">
+            Get Started — It's Free
+            <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand column -->
+        <div class="footer__brand">
+          <a href="#" class="navbar__logo">
+            <span class="navbar__logo-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <rect width="32" height="32" rx="8" fill="url(#logo-gradient-footer)"/>
+                <path d="M10 22V14L16 10L22 14V22L16 18L10 22Z" fill="white" opacity="0.9"/>
+                <path d="M16 10L22 14L16 18L10 14L16 10Z" fill="white"/>
+                <defs>
+                  <linearGradient id="logo-gradient-footer" x1="0" y1="0" x2="32" y2="32">
+                    <stop stop-color="#4F46E5"/>
+                    <stop offset="1" stop-color="#7C3AED"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="navbar__logo-text">StudentOS</span>
+          </a>
+          <p class="footer__desc">Your all-in-one student productivity platform. Plan, track, and achieve your academic goals with ease.</p>
+          <!-- Social Icons -->
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__column">
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#hero" class="footer__link">Home</a></li>
+            <li><a href="#features" class="footer__link">Features</a></li>
+            <li><a href="#about" class="footer__link">About</a></li>
+            <li><a href="#testimonials" class="footer__link">Testimonials</a></li>
+            <li><a href="#faq" class="footer__link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer__column">
+          <h4 class="footer__heading">Resources</h4>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Blog</a></li>
+            <li><a href="#" class="footer__link">Documentation</a></li>
+            <li><a href="#" class="footer__link">Help Center</a></li>
+            <li><a href="#" class="footer__link">Community</a></li>
+            <li><a href="#" class="footer__link">Changelog</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer__column">
+          <h4 class="footer__heading">Legal</h4>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms of Service</a></li>
+            <li><a href="#" class="footer__link">Cookie Policy</a></li>
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <p>&copy; 2026 StudentOS. All rights reserved. Built with ❤️ for students.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
